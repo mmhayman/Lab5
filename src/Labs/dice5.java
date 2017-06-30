@@ -1,4 +1,4 @@
-/**
+package Labs; /**
  * Created by michelhayman on 6/29/17.
  */
 
@@ -37,11 +37,11 @@ public class dice5 {
 
 
             roll1 = (int) (Math.random() * numberSides + 1); // roll one -random
-            roll2 = (int) (Math.random() * numberSides + 1);
+            roll2 = (int) (Math.random() * numberSides + 1); // roll two -random
 
 
             System.out.println(" Roll 1 : " + roll1); // roll one output
-            System.out.println(" Roll 2 : " + roll2);
+            System.out.println(" Roll 2 : " + roll2); // roll two output
 
 
             System.out.println("Do you want to roll again? (y/n)"); // asking user to roll again
@@ -54,8 +54,9 @@ public class dice5 {
 
             System.out.println("bye!"); // if user presses n - leaves
         }
-
     }
 
-
 }
+// code can go here
+
+
