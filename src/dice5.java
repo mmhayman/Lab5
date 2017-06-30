@@ -19,10 +19,10 @@ public class dice5 {
 
     public static void main(String[] args) {
 
-        System.out.println("How many sides should each die have? ");
-        numberSides = scan.nextInt();
+        System.out.println("How many sides should each die have? "); // asking user how many sides a die has
+        numberSides = scan.nextInt(); // user input
 
-        rolledDie();
+        rolledDie(); // calling this method
 
     }
 
@@ -31,32 +31,31 @@ public class dice5 {
         System.out.println("Please roll the dice. "); // asking user to roll dice
 
 
+        while (choice.equalsIgnoreCase("y")) ;
 
-            while(choice.equalsIgnoreCase("y"));
-
-            for (int i = 0; i < 2; i++) { // for loop for the random dice output
-
-
-                roll1 = (int) (Math.random() * numberSides + 1); // roll one -random
-                roll2 = (int) (Math.random() * numberSides + 1);
+        for (int i = 0; i < 2; i++) { // for loop for the random dice output
 
 
-                System.out.println(" Roll 1 : " + roll1); // roll one output
-                System.out.println(" Roll 2 : " + roll2);
+            roll1 = (int) (Math.random() * numberSides + 1); // roll one -random
+            roll2 = (int) (Math.random() * numberSides + 1);
 
 
-                System.out.println("Do you want to roll again? (y/n)"); // asking user to roll again
-                choice = scan.next();
-                System.out.println();
+            System.out.println(" Roll 1 : " + roll1); // roll one output
+            System.out.println(" Roll 2 : " + roll2);
 
-            }
+
+            System.out.println("Do you want to roll again? (y/n)"); // asking user to roll again
+            choice = scan.next();
+            System.out.println();
+
+        }
 
         {
 
-            System.out.println("bye!");
+            System.out.println("bye!"); // if user presses n - leaves
         }
 
     }
 
 
-    }
+}
