@@ -11,52 +11,51 @@ public class dice5 {
 
     private static Scanner scan = new Scanner(System.in);
 
-    private static String choice = " ";
-    private static int numberSides;
+    private static String choice = "y";
+
     private static int roll1;
     private static int roll2;
+    private static int userInput = 0;
 
 
     public static void main(String[] args) {
+int numberSides; // declaring here
 
         System.out.println("How many sides should each die have? "); // asking user how many sides a die has
         numberSides = scan.nextInt(); // user input
 
-        rolledDie(); // calling this method
+        rolledDie(numberSides); // calling this method - numberSides connects nSides from RolledDice
 
     }
 
-    public static void rolledDie() {
+    public static void rolledDie(int nSides) { // int nSides = numberSides from main
 
-        System.out.println("Please roll the dice. "); // asking user to roll dice
+        while (choice.equalsIgnoreCase("y")) {
 
-
-        while (choice.equalsIgnoreCase("y")) ;
-
-        for (int i = 0; i < 2; i++) { // for loop for the random dice output
+            System.out.println("How many times do you want to roll the dice? "); // asking user how many times they want to roll the die
+            userInput = scan.nextInt();
 
 
-            roll1 = (int) (Math.random() * numberSides + 1); // roll one -random
-            roll2 = (int) (Math.random() * numberSides + 1); // roll two -random
+            for (int i = 0; i < userInput; i++) { // for loop for the random dice output
 
 
-            System.out.println(" Roll 1 : " + roll1); // roll one output
-            System.out.println(" Roll 2 : " + roll2); // roll two output
+                roll1 = (int) (Math.random() * nSides + 1); // roll one -random **nSides is numberSides from main
 
+                System.out.println("Rolls: " + roll1); // roll one output
 
+            }
             System.out.println("Do you want to roll again? (y/n)"); // asking user to roll again
             choice = scan.next();
             System.out.println();
-
         }
 
-        {
-
+        if (choice.equalsIgnoreCase("n")) {
             System.out.println("bye!"); // if user presses n - leaves
         }
-    }
 
+
+    }
 }
-// code can go here
+
 
 
